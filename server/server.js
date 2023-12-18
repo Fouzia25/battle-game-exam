@@ -20,12 +20,12 @@ app.use(express.json());
 // Use bodyParser
 app.use(bodyParser.json());
 // Permet de décripter des URL
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Use cors
 app.use(cors({
-    origin: '*',
-    optionsSuccessStatus: 200
+  origin: '*',
+  optionsSuccessStatus: 200
 })
 );
 
@@ -36,16 +36,16 @@ app.use('/', userRoutes);
 
 // Configuration et lancement du serveur
 const start = async () => {
-    try {
-        await connectDb();
-        const port = process.env.PORT || 5000;
-        app.listen(port, () => {
-            console.log(`le serveur à démarré sur le port ${port}`);
+  try {
+    await connectDb();
+    const port = process.env.PORT || 5000;
+    app.listen(port, () => {
+      console.log(`le serveur à démarré sur le port ${port}`);
 
-        })
-    } catch (error) {
-        console.log(`Erreur lors du démarrage du serveur`);
-    }
+    })
+  } catch (error) {
+    console.log(`Erreur lors du démarrage du serveur`);
+  }
 };
 
 start();
