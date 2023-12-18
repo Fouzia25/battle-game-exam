@@ -1,4 +1,4 @@
-# Modèle créé le : Fri Aug 11 13:20:45 CEST 2023 
+# Modï¿½le crï¿½ï¿½ le : Fri Aug 11 13:20:45 CEST 2023 
 Perso (IdPerso, AttPerso, DefPerso, imgIdlePerso, imgAttPerso, imgDefPerso, imgDiePerso, NamePerso) 
 Player (IdPlayer, NamePlayer, AttPlayer, DefPlayer, LevelPlayer, IdPersoPlayer, #IdPerso) 
 Team1 (IdTeam1, Buff1, TimeStampsTeam1) 

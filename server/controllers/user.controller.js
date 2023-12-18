@@ -59,7 +59,7 @@ const createPlayer = (req, res) => {
 
 
 const getPerso = (req, res) => {
-  const query = "SELECT * FROM perso WHERE idPerso = ?";
+  const query = "SELECT * FROM perso WHERE IdPerso = ?";
   conn.query(query, [req.params.id], (err, result) => {
     if (err) {
       console.error('Erreur de la récupération des données ' + err);

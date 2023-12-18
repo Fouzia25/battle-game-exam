@@ -16,14 +16,14 @@ if (modalImage.src) {
 images.forEach(image => {
   image.addEventListener("click", () => {
 
-    const idPerso = image.id
+    const IdPerso = image.id
     modal.style.display = "block";
     modalImage.src = image.src;
-    modalImage.alt = idPerso;
+    modalImage.alt = IdPerso;
 
 
 
-    fetch(`http://localhost:8080/hero/${idPerso}`, {
+    fetch(`http://localhost:8080/hero/${IdPerso}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json"
@@ -50,8 +50,6 @@ images.forEach(image => {
 });
 
 
-
-
 document.getElementById('user-form').addEventListener('submit', function (event) {
 
   event.preventDefault(); // Empêcher le formulaire de se soumettre normalement
@@ -59,14 +57,14 @@ document.getElementById('user-form').addEventListener('submit', function (event)
 
   const inputName = document.getElementById('inputName').value;
   const level = 10;
-  const idPerso = modalImage.alt;
+  const IdPerso = modalImage.alt;
 
   const userData = {
     NamePlayer: inputName,
     AttPlayer: Attk,
     DefPlayer: Deef,
     LevelPlayer: level,
-    idPerso: idPerso
+    IdPerso: IdPerso
   };
 
   fetch('http://localhost:8080/register', {
